@@ -2,7 +2,6 @@
 layout: default
 ---
 <header class="offer-header">
-  {% include band-graphic.html kind="light" %}
   <div class="container prose">
     <div class="eyebrow">{{ page.eyebrow }}</div>
     <h1>{{ page.title }}</h1>
@@ -21,6 +20,7 @@ layout: default
         <dd>{{ page.format }}</dd>
       </div>
     </dl>
+    {% include line-divider.html %}
   </div>
 </header>
 

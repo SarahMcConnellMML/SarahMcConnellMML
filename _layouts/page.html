@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-{% if page.banner_variant %}
+{% if page.banner_include %}
 <div class="page-banner">
-  {% include banner-graphic.html variant=page.banner_variant %}
+  {% include {{ page.banner_include }} %}
 </div>
 {% endif %}
 <article class="section">

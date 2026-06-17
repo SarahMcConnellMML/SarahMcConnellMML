@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="hero">
-  {% include banner-graphic.html variant="a" %}
+  {% include hero-graphic.html %}
   <div class="container prose">
     <div class="eyebrow">{{ page.hero_eyebrow }}</div>
     <h1>{{ page.hero_headline }}</h1>
@@ -12,10 +12,10 @@ layout: default
 </section>
 
 <section class="section">
-  {% include band-graphic.html kind="light" %}
   <div class="container prose">
     <div class="eyebrow">{{ page.recognition_eyebrow }}</div>
     {{ content }}
+    {% include line-divider.html %}
   </div>
 </section>
 
