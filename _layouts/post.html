@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article>
+  <header class="post-header">
+    <div class="container prose">
+      <div class="eyebrow">{{ page.eyebrow | default: "Insight" }}</div>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header>
+  <div class="container">
+    <div class="post-body prose">
+      {{ content }}
+    </div>
+  </div>
+</article>

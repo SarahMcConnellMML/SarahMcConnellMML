@@ -1,0 +1,12 @@
+This folder is where your image files live: logo, photos, the white paper cover, social
+share image, anything else the site references.
+
+Suggested files to add once you have them:
+- logo.svg or logo.png (referenced from the header if you want a mark instead of, or
+  alongside, the text logo)
+- og-image.jpg (the image shown when the site is shared on LinkedIn or elsewhere,
+  1200x630px is the standard size)
+- white-paper-cover.jpg (if you want a cover image on the white paper page)
+
+You can delete this file once you've added real images. It's excluded from the
+published site either way, since it has no front matter for Jekyll to process.

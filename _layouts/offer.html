@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<header class="offer-header">
+  <div class="container prose">
+    <div class="eyebrow">{{ page.eyebrow }}</div>
+    <h1>{{ page.title }}</h1>
+    <p class="lede">{{ page.tagline }}</p>
+    <dl class="offer-meta">
+      <div>
+        <dt>Investment</dt>
+        <dd>{{ page.price }}</dd>
+      </div>
+      <div>
+        <dt>Timeframe</dt>
+        <dd>{{ page.timeframe }}</dd>
+      </div>
+      <div>
+        <dt>Format</dt>
+        <dd>{{ page.format }}</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<div class="section">
+  <div class="container prose">
+    {{ content }}
+  </div>
+</div>
+
+<div class="section section--ink">
+  <div class="container prose">
+    <div class="eyebrow">{{ page.cta_eyebrow }}</div>
+    <h2>{{ page.cta_headline }}</h2>
+    <p>{{ page.cta_body }}</p>
+    <a class="action action--on-ink" href="mailto:{{ site.contact_email }}">{{ page.cta_label }} →</a>
+  </div>
+</div>

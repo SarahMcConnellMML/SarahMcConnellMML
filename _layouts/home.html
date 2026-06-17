@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="container prose">
+    <div class="eyebrow">{{ page.hero_eyebrow }}</div>
+    <h1>{{ page.hero_headline }}</h1>
+    <p class="lede">{{ page.hero_subhead }}</p>
+    <a class="action" href="{{ page.hero_cta_url }}">{{ page.hero_cta_label }} →</a>
+  </div>
+</section>
+
+<section class="section section--parchment">
+  <div class="container prose">
+    <div class="eyebrow">{{ page.recognition_eyebrow }}</div>
+    {{ content }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="eyebrow">{{ page.offers_eyebrow }}</div>
+    <h2>{{ page.offers_headline }}</h2>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <h3>AI Baseline</h3>
+        <div class="price">£1,500</div>
+        <p>{{ page.offer_baseline_summary }}</p>
+        <a class="action--quiet" href="{{ '/ai-baseline/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+      </div>
+      <div class="offer-card">
+        <h3>AI Readiness Diagnostic</h3>
+        <div class="price">£25,000</div>
+        <p>{{ page.offer_diagnostic_summary }}</p>
+        <a class="action--quiet" href="{{ '/ai-readiness-diagnostic/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if site.posts.size > 0 %}
+<section class="section section--parchment">
+  <div class="container">
+    <div class="eyebrow">{{ page.insights_eyebrow }}</div>
+    <h2>{{ page.insights_headline }}</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top: var(--space-3);"><a class="action--quiet" href="{{ '/blog/' | relative_url }}">{{ page.insights_view_all_label }} →</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--ink">
+  <div class="container prose">
+    <div class="eyebrow">{{ page.paper_eyebrow }}</div>
+    <h2>{{ page.paper_headline }}</h2>
+    <p>{{ page.paper_summary }}</p>
+    <a class="action action--on-ink" href="{{ '/white-paper/' | relative_url }}">{{ page.paper_cta_label }} →</a>
+  </div>
+</section>

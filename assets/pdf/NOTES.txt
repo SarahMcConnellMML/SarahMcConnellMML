@@ -1,0 +1,9 @@
+Upload your white paper PDF here.
+
+The white paper page (white-paper.md) links to:
+  /assets/pdf/agility-in-the-age-of-ai.pdf
+
+So either name your uploaded file exactly that, or open white-paper.md and change
+the filename in the download link to match whatever you actually upload.
+
+You can delete this file once the real PDF is in place.

@@ -1,0 +1,467 @@
+/* ==========================================================================
+   MML — base tokens
+   ========================================================================== */
+
+:root {
+  --ink-teal: #0A3D3A;
+  --charcoal: #1B1B1A;
+  --ochre: #A87C2C;
+  --parchment: #E8D5A3;
+  --off-white: #F7F2E9;
+
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 38rem;        /* comfortable reading width for body copy */
+  --measure-wide: 64rem;   /* wider container for nav, hero, offer comparisons */
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+  --space-6: 8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--off-white);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--ink-teal);
+  text-decoration-color: var(--ochre);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--ochre);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ochre);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--ink-teal);
+  line-height: 1.2;
+  margin: 0 0 var(--space-2) 0;
+}
+
+h1 { font-size: clamp(2.1rem, 4.5vw, 3.4rem); font-weight: 600; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h3 { font-size: 1.3rem; }
+
+p { margin: 0 0 var(--space-3) 0; }
+
+.container {
+  width: 100%;
+  max-width: var(--measure-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+/* ==========================================================================
+   Signature device — the eyebrow + rule
+   Used wherever a section needs a quiet diagnostic label rather than
+   a decorative heading. This is the one recurring motif across the site.
+   ========================================================================== */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ochre);
+}
+
+.eyebrow::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--ochre);
+  opacity: 0.45;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid rgba(10, 61, 58, 0.18);
+  margin: var(--space-5) 0;
+}
+
+/* ==========================================================================
+   Header / nav
+   ========================================================================== */
+
+.site-header {
+  border-bottom: 1px solid rgba(10, 61, 58, 0.12);
+  padding: var(--space-3) 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink-teal);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.site-logo span {
+  color: var(--ochre);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--ink-teal);
+  border-bottom-color: var(--ochre);
+}
+
+/* ==========================================================================
+   Buttons / links-as-actions
+   Deliberately not button-shaped chrome with shadows — a quiet, flat
+   invitation rather than a sales CTA.
+   ========================================================================== */
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 600;
+  font-size: 0.98rem;
+  text-decoration: none;
+  padding: 0.7em 1.1em;
+  border: 1.5px solid var(--ink-teal);
+  border-radius: 2px;
+  color: var(--ink-teal);
+  background: transparent;
+}
+
+.action:hover {
+  background: var(--ink-teal);
+  color: var(--off-white);
+}
+
+.action--quiet {
+  border: none;
+  padding: 0;
+  color: var(--ink-teal);
+  text-decoration: underline;
+  text-decoration-color: var(--ochre);
+  text-underline-offset: 0.2em;
+}
+
+.action--quiet:hover {
+  color: var(--ochre);
+  background: none;
+}
+
+.action--on-ink {
+  border-color: var(--off-white);
+  color: var(--off-white);
+}
+
+.action--on-ink:hover {
+  background: var(--off-white);
+  color: var(--ink-teal);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+}
+
+.hero .eyebrow {
+  justify-content: flex-start;
+}
+
+.hero .eyebrow::after {
+  flex: 0 0 4rem;
+}
+
+.hero h1 {
+  max-width: 42rem;
+}
+
+.hero .lede {
+  max-width: var(--measure);
+  font-size: 1.2rem;
+  color: var(--charcoal);
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.section {
+  padding: var(--space-5) 0;
+}
+
+.section--parchment {
+  background: var(--parchment);
+}
+
+.section--ink {
+  background: var(--ink-teal);
+  color: var(--off-white);
+}
+
+.section--ink h2,
+.section--ink h3 {
+  color: var(--off-white);
+}
+
+.section--ink a {
+  color: var(--parchment);
+}
+
+/* ==========================================================================
+   Offer teaser cards (homepage)
+   ========================================================================== */
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 700px) {
+  .offer-grid { grid-template-columns: 1fr; }
+}
+
+.offer-card {
+  border: 1px solid rgba(10, 61, 58, 0.18);
+  padding: var(--space-4);
+  background: var(--off-white);
+}
+
+.offer-card .price {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--ochre);
+  margin-bottom: var(--space-2);
+}
+
+/* ==========================================================================
+   Offer page (full detail)
+   ========================================================================== */
+
+.offer-header {
+  padding: var(--space-5) 0 var(--space-4);
+  border-bottom: 1px solid rgba(10, 61, 58, 0.15);
+}
+
+.offer-meta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+  font-size: 0.95rem;
+}
+
+.offer-meta dt {
+  font-weight: 700;
+  color: var(--ink-teal);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2em;
+}
+
+.offer-meta dd {
+  margin: 0;
+}
+
+.offer-steps {
+  list-style: none;
+  margin: var(--space-3) 0 0 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.offer-steps li {
+  position: relative;
+  padding-left: 2.6rem;
+  margin-bottom: var(--space-3);
+  counter-increment: step;
+}
+
+.offer-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 1px solid var(--ochre);
+  color: var(--ochre);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Blog index + post
+   ========================================================================== */
+
+.post-list {
+  list-style: none;
+  margin: var(--space-3) 0 0 0;
+  padding: 0;
+}
+
+.post-list li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(10, 61, 58, 0.15);
+}
+
+.post-list time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ochre);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.3em;
+}
+
+.post-list h3 {
+  margin-bottom: 0.3em;
+}
+
+.post-list h3 a {
+  text-decoration: none;
+  color: var(--ink-teal);
+}
+
+.post-excerpt {
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.post-header {
+  padding: var(--space-5) 0 var(--space-3);
+}
+
+.post-header time {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ochre);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.post-body {
+  max-width: var(--measure);
+  font-size: 1.08rem;
+}
+
+.post-body h2 { margin-top: var(--space-4); }
+
+.prose blockquote {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-3);
+  border-left: 3px solid var(--ochre);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--ink-teal);
+}
+
+/* ==========================================================================
+   White paper page
+   ========================================================================== */
+
+.paper-cover {
+  border: 1px solid rgba(10, 61, 58, 0.18);
+  background: var(--off-white);
+  padding: var(--space-4);
+  max-width: 22rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--ink-teal);
+  color: var(--off-white);
+  padding: var(--space-4) 0;
+  margin-top: var(--space-6);
+}
+
+.site-footer a {
+  color: var(--parchment);
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+}

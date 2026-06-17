@@ -1,0 +1,52 @@
+title: Measure Model Lead
+tagline: "[SITE TAGLINE PLACEHOLDER]"
+description: "[SITE META DESCRIPTION PLACEHOLDER - one or two sentences, used by search engines and link previews]"
+url: "https://measuremodellead.co.uk"
+baseurl: ""
+
+# Used in the footer and in page titles. Replace with whatever you'd like
+# to appear in the browser tab, e.g. "Measure Model Lead | AI Readiness for Organisations"
+author: "[YOUR NAME PLACEHOLDER]"
+contact_email: "[CONTACT EMAIL PLACEHOLDER]"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: /blog/:title/
+
+# These three plugins are all on GitHub's approved list, so GitHub Pages
+# will build them automatically. You don't need to install anything.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Files in this list are kept in the project for your own reference but
+# will not be turned into pages on the live site.
+exclude:
+  - SETUP-GUIDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - "*.gemspec"
+  - assets/images/NOTES.txt
+  - assets/pdf/NOTES.txt
