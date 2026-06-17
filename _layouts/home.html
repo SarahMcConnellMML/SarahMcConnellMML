@@ -10,8 +10,9 @@ layout: default
   </div>
 </section>
 
-<section class="section section--parchment">
+<section class="section">
   <div class="container prose">
+    {% include stripe-accent.html %}
     <div class="eyebrow">{{ page.recognition_eyebrow }}</div>
     {{ content }}
   </div>
@@ -39,7 +40,7 @@ layout: default
 </section>
 
 {% if site.posts.size > 0 %}
-<section class="section section--parchment">
+<section class="section">
   <div class="container">
     <div class="eyebrow">{{ page.insights_eyebrow }}</div>
     <h2>{{ page.insights_headline }}</h2>
@@ -59,6 +60,7 @@ layout: default
 
 <section class="section section--ink">
   <div class="container prose">
+    {% include stripe-accent.html modifier="stripe-accent--ghost" %}
     <div class="eyebrow">{{ page.paper_eyebrow }}</div>
     <h2>{{ page.paper_headline }}</h2>
     <p>{{ page.paper_summary }}</p>

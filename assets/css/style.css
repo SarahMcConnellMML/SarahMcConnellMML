@@ -21,6 +21,9 @@
   --space-4: 3rem;
   --space-5: 5rem;
   --space-6: 8rem;
+
+  /* Tiled SVG grain — paper-texture accent, not an image asset */
+  --noise-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 * {
@@ -32,6 +35,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   background: var(--off-white);
   color: var(--charcoal);
@@ -39,6 +43,19 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--noise-tile);
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
 }
 
 img {
@@ -76,6 +93,7 @@ h3 { font-size: 1.3rem; }
 p { margin: 0 0 var(--space-3) 0; }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: var(--measure-wide);
   margin: 0 auto;
@@ -227,7 +245,23 @@ hr.rule {
    ========================================================================== */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: var(--space-6) 0 var(--space-5);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 58%;
+  height: 145%;
+  background: var(--ink-teal);
+  opacity: 0.05;
+  clip-path: polygon(34% 0%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero .eyebrow {
@@ -253,16 +287,26 @@ hr.rule {
    ========================================================================== */
 
 .section {
+  position: relative;
   padding: var(--space-5) 0;
-}
-
-.section--parchment {
-  background: var(--parchment);
 }
 
 .section--ink {
   background: var(--ink-teal);
   color: var(--off-white);
+}
+
+.section--ink::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--noise-tile);
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
 }
 
 .section--ink h2,
@@ -272,6 +316,55 @@ hr.rule {
 
 .section--ink a {
   color: var(--parchment);
+}
+
+/* ==========================================================================
+   Stripe accent — the thin double-line motif pulled from the brand banner.
+   Used asymmetrically, as a deliberate accent, never as a flood fill.
+   ========================================================================== */
+
+.stripe-accent {
+  position: absolute;
+  top: var(--space-3);
+  right: 6%;
+  width: 11rem;
+  transform: rotate(-1.5deg);
+  pointer-events: none;
+}
+
+.stripe-accent .line-1,
+.stripe-accent .line-2 {
+  display: block;
+}
+
+.stripe-accent .line-1 {
+  height: 2px;
+  background: var(--ochre);
+  margin-bottom: 5px;
+}
+
+.stripe-accent .line-2 {
+  height: 1px;
+  width: 82%;
+  background: var(--parchment);
+}
+
+.stripe-accent--ghost {
+  top: auto;
+  bottom: var(--space-3);
+  left: 6%;
+  right: auto;
+  width: 9rem;
+  transform: rotate(1deg);
+  opacity: 0.55;
+}
+
+.stripe-accent--ghost .line-1 {
+  background: var(--parchment);
+}
+
+.stripe-accent--ghost .line-2 {
+  background: var(--ochre);
 }
 
 /* ==========================================================================
@@ -448,10 +541,24 @@ hr.rule {
    ========================================================================== */
 
 .site-footer {
+  position: relative;
   background: var(--ink-teal);
   color: var(--off-white);
   padding: var(--space-4) 0;
   margin-top: var(--space-6);
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--noise-tile);
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
 }
 
 .site-footer a {
