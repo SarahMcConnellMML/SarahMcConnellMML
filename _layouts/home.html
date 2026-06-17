@@ -2,6 +2,7 @@
 layout: default
 ---
 <section class="hero">
+  {% include banner-graphic.html variant="a" %}
   <div class="container prose">
     <div class="eyebrow">{{ page.hero_eyebrow }}</div>
     <h1>{{ page.hero_headline }}</h1>
@@ -11,8 +12,8 @@ layout: default
 </section>
 
 <section class="section">
+  {% include band-graphic.html kind="light" %}
   <div class="container prose">
-    {% include stripe-accent.html %}
     <div class="eyebrow">{{ page.recognition_eyebrow }}</div>
     {{ content }}
   </div>
@@ -28,12 +29,14 @@ layout: default
         <div class="price">£1,500</div>
         <p>{{ page.offer_baseline_summary }}</p>
         <a class="action--quiet" href="{{ '/ai-baseline/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+        {% include stripe-card.html %}
       </div>
       <div class="offer-card">
         <h3>AI Readiness Diagnostic</h3>
         <div class="price">£25,000</div>
         <p>{{ page.offer_diagnostic_summary }}</p>
         <a class="action--quiet" href="{{ '/ai-readiness-diagnostic/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+        {% include stripe-card.html %}
       </div>
     </div>
   </div>
@@ -59,8 +62,8 @@ layout: default
 {% endif %}
 
 <section class="section section--ink">
+  {% include band-graphic.html kind="dark" %}
   <div class="container prose">
-    {% include stripe-accent.html modifier="stripe-accent--ghost" %}
     <div class="eyebrow">{{ page.paper_eyebrow }}</div>
     <h2>{{ page.paper_headline }}</h2>
     <p>{{ page.paper_summary }}</p>

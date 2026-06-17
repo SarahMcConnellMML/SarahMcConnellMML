@@ -1,0 +1,22 @@
+<div class="banner-graphic banner-graphic--{{ include.variant | default: "a" }}">
+  <div class="blob"></div>
+  {% if include.variant == "b" %}
+  <svg class="linework" viewBox="0 0 900 280" preserveAspectRatio="none">
+    <polygon points="830,30 620,150 800,230" fill="none" stroke="#A87C2C" stroke-width="1.5" opacity="0.85"/>
+    <line x1="770" y1="50" x2="670" y2="195" stroke="#A87C2C" stroke-width="1" opacity="0.55"/>
+  </svg>
+  {% elsif include.variant == "c" %}
+  <svg class="linework" viewBox="0 0 900 280" preserveAspectRatio="none">
+    <polygon points="60,230 250,150 90,80" fill="none" stroke="#E8D5A3" stroke-width="1.5" opacity="0.85"/>
+    <line x1="120" y1="210" x2="200" y2="100" stroke="#E8D5A3" stroke-width="1" opacity="0.55"/>
+  </svg>
+  {% else %}
+  <svg class="linework" viewBox="0 0 900 280" preserveAspectRatio="none">
+    <polygon points="70,30 280,150 100,230" fill="none" stroke="#A87C2C" stroke-width="1.5" opacity="0.85"/>
+    <line x1="130" y1="50" x2="230" y2="195" stroke="#A87C2C" stroke-width="1" opacity="0.55"/>
+  </svg>
+  {% endif %}
+  <div class="cut"></div>
+  <div class="peek"></div>
+  <div class="stripe-trio"><span class="l1"></span><span class="l2"></span><span class="l3"></span></div>
+</div>

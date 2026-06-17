@@ -4,6 +4,7 @@ permalink: /white-paper/
 title: "Agility in the Age of AI"
 eyebrow: "[WHITE PAPER EYEBROW PLACEHOLDER — e.g. WHITE PAPER]"
 description: "[WHITE PAPER META DESCRIPTION PLACEHOLDER]"
+banner_variant: c
 ---
 
 [WHITE PAPER INTRO PLACEHOLDER — one or two paragraphs setting up what the paper covers and why you wrote it.]

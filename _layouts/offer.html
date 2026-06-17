@@ -2,6 +2,7 @@
 layout: default
 ---
 <header class="offer-header">
+  {% include band-graphic.html kind="light" %}
   <div class="container prose">
     <div class="eyebrow">{{ page.eyebrow }}</div>
     <h1>{{ page.title }}</h1>
@@ -30,8 +31,8 @@ layout: default
 </div>
 
 <div class="section section--ink">
+  {% include band-graphic.html kind="dark" %}
   <div class="container prose">
-    {% include stripe-accent.html modifier="stripe-accent--ghost" %}
     <div class="eyebrow">{{ page.cta_eyebrow }}</div>
     <h2>{{ page.cta_headline }}</h2>
     <p>{{ page.cta_body }}</p>

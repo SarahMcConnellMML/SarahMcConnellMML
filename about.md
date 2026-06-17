@@ -4,6 +4,7 @@ permalink: /about/
 title: About
 eyebrow: "[ABOUT EYEBROW PLACEHOLDER]"
 description: "[ABOUT META DESCRIPTION PLACEHOLDER]"
+banner_variant: b
 ---
 
 [ABOUT NARRATIVE OPENING PLACEHOLDER — this should be the personal story or perspective that comes before any credentials. Write it the way you'd actually tell someone how you got here and why this work matters to you. One substantial paragraph, set larger than the rest of the body if you want it to read as the opening statement of the page.]
