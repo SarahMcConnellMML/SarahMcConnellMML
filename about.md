@@ -2,21 +2,18 @@
 layout: page
 permalink: /about/
 title: About
-eyebrow: "[ABOUT EYEBROW PLACEHOLDER]"
-description: "[ABOUT META DESCRIPTION PLACEHOLDER]"
+description: "Sarah's background in agile coaching and delivery, and why she started MML to diagnose what's underneath AI initiatives before they're built on."
 banner_include: banner-about.html
 ---
 
-[ABOUT NARRATIVE OPENING PLACEHOLDER — this should be the personal story or perspective that comes before any credentials. Write it the way you'd actually tell someone how you got here and why this work matters to you. One substantial paragraph, set larger than the rest of the body if you want it to read as the opening statement of the page.]
+I spent years inside organisations running agile transformations. The pattern was always the same. Teams got their sprints, their stand ups, their certificates. Leadership kept making decisions exactly the way it always had, with new vocabulary stuck on top. The problems teams raised in retrospectives, unclear priorities, unresolved dependencies, technical debt nobody wanted to own, got written down and left there, because fixing them needed authority that sat above the team.
 
-[ABOUT NARRATIVE BODY PLACEHOLDER — second paragraph continuing the personal narrative. What you noticed, what didn't sit right, what you decided to do about it.]
+I'm watching the same thing happen with AI now, compressed into months instead of years, and considerably more expensive to get wrong.
 
-> [ABOUT PULL QUOTE PLACEHOLDER — an optional single sentence that captures your point of view, pulled out and set in the serif typeface as a quiet visual break in the page.]
-
-[ABOUT NARRATIVE CLOSING PLACEHOLDER — third paragraph, the turn from personal story toward what you do now.]
+I started MML to do the part of this work most organisations skip. Not picking tools, not writing strategy, but establishing whether the system underneath an AI investment can actually hold it: decision rights nobody's clarified, data fragmented across functions with no incentive to share it, governance that exists on paper and nowhere else, leadership announcing change without doing anything to make it land. That diagnosis is the work. The transformation only succeeds if it's built on an accurate one.
 
 <hr class="rule">
 
-<div class="eyebrow">[ABOUT CREDENTIALS EYEBROW PLACEHOLDER — e.g. BACKGROUND]</div>
+<div class="eyebrow">Background</div>
 
-[ABOUT CREDENTIALS PLACEHOLDER — this is where the formal background goes: roles, qualifications, the organisations you've worked with, certifications. Keep it after the narrative, not before it, and keep the tone matter-of-fact rather than promotional.]
+My background is agile coaching and delivery, including time at Jaguar Land Rover and Dyson. I currently work full time at Entain, inside a large organisation working through its own AI adoption in real time, which keeps the diagnosis grounded in what's actually happening on the ground rather than theory.

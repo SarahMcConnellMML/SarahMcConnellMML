@@ -3,7 +3,7 @@ layout: default
 ---
 <header class="offer-header">
   <div class="container prose">
-    <div class="eyebrow">{{ page.eyebrow }}</div>
+    {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
     <h1>{{ page.title }}</h1>
     <p class="lede">{{ page.tagline }}</p>
     <dl class="offer-meta">
@@ -11,14 +11,18 @@ layout: default
         <dt>Investment</dt>
         <dd>{{ page.price }}</dd>
       </div>
+      {% if page.timeframe %}
       <div>
         <dt>Timeframe</dt>
         <dd>{{ page.timeframe }}</dd>
       </div>
+      {% endif %}
+      {% if page.format %}
       <div>
         <dt>Format</dt>
         <dd>{{ page.format }}</dd>
       </div>
+      {% endif %}
     </dl>
     {% include line-divider.html %}
   </div>
@@ -33,9 +37,13 @@ layout: default
 <div class="section section--ink">
   {% include band-graphic.html kind="dark" %}
   <div class="container prose">
-    <div class="eyebrow">{{ page.cta_eyebrow }}</div>
-    <h2>{{ page.cta_headline }}</h2>
-    <p>{{ page.cta_body }}</p>
+    {% if page.cta_eyebrow %}<div class="eyebrow">{{ page.cta_eyebrow }}</div>{% endif %}
+    {% if page.cta_headline %}<h2>{{ page.cta_headline }}</h2>{% endif %}
+    {% if page.cta_body %}<p>{{ page.cta_body }}</p>{% endif %}
+    {% if page.cta_url %}
+    <a class="action action--on-ink" href="{{ page.cta_url }}">{{ page.cta_label }} →</a>
+    {% else %}
     <a class="action action--on-ink" href="mailto:{{ site.contact_email }}">{{ page.cta_label }} →</a>
+    {% endif %}
   </div>
 </div>

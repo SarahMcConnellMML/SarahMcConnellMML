@@ -4,7 +4,7 @@ layout: default
 <section class="hero">
   {% include hero-graphic.html %}
   <div class="container prose">
-    <div class="eyebrow">{{ page.hero_eyebrow }}</div>
+    {% if page.hero_eyebrow %}<div class="eyebrow">{{ page.hero_eyebrow }}</div>{% endif %}
     <h1>{{ page.hero_headline }}</h1>
     <p class="lede">{{ page.hero_subhead }}</p>
     <a class="action" href="{{ page.hero_cta_url }}">{{ page.hero_cta_label }} →</a>
@@ -13,16 +13,29 @@ layout: default
 
 <section class="section">
   <div class="container prose">
-    <div class="eyebrow">{{ page.recognition_eyebrow }}</div>
+    {% if page.recognition_eyebrow %}<div class="eyebrow">{{ page.recognition_eyebrow }}</div>{% endif %}
     {{ content }}
     {% include line-divider.html %}
   </div>
 </section>
 
+{% if page.how_it_works_steps %}
+<section class="section">
+  <div class="container prose">
+    {% if page.how_it_works_eyebrow %}<div class="eyebrow">{{ page.how_it_works_eyebrow }}</div>{% endif %}
+    <ol class="offer-steps">
+      {% for step in page.how_it_works_steps %}
+      <li>{{ step }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <div class="container">
-    <div class="eyebrow">{{ page.offers_eyebrow }}</div>
-    <h2>{{ page.offers_headline }}</h2>
+    {% if page.offers_eyebrow %}<div class="eyebrow">{{ page.offers_eyebrow }}</div>{% endif %}
+    {% if page.offers_headline %}<h2>{{ page.offers_headline }}</h2>{% endif %}
     <div class="offer-grid">
       <div class="offer-card">
         <h3>AI Baseline</h3>
@@ -42,11 +55,28 @@ layout: default
   </div>
 </section>
 
+{% if page.credibility_text %}
+<section class="section">
+  <div class="container prose">
+    <p>{{ page.credibility_text }} <a href="{{ '/about/' | relative_url }}">{{ page.credibility_link_label }}</a></p>
+  </div>
+</section>
+{% endif %}
+
+{% if page.closing_cta_baseline_label %}
+<section class="section">
+  <div class="container prose" style="display:flex; gap: var(--space-3); flex-wrap: wrap; align-items:center;">
+    <a class="action" href="{{ page.closing_cta_baseline_url | default: '/ai-baseline/' }}">{{ page.closing_cta_baseline_label }} →</a>
+    <a class="action--quiet" href="{{ page.closing_cta_call_url | default: '#' }}">{{ page.closing_cta_call_label }} →</a>
+  </div>
+</section>
+{% endif %}
+
 {% if site.posts.size > 0 %}
 <section class="section">
   <div class="container">
-    <div class="eyebrow">{{ page.insights_eyebrow }}</div>
-    <h2>{{ page.insights_headline }}</h2>
+    {% if page.insights_eyebrow %}<div class="eyebrow">{{ page.insights_eyebrow }}</div>{% endif %}
+    {% if page.insights_headline %}<h2>{{ page.insights_headline }}</h2>{% endif %}
     <ul class="post-list">
       {% for post in site.posts limit: 3 %}
       <li>
@@ -64,7 +94,7 @@ layout: default
 <section class="section section--ink">
   {% include band-graphic.html kind="dark" %}
   <div class="container prose">
-    <div class="eyebrow">{{ page.paper_eyebrow }}</div>
+    {% if page.paper_eyebrow %}<div class="eyebrow">{{ page.paper_eyebrow }}</div>{% endif %}
     <h2>{{ page.paper_headline }}</h2>
     <p>{{ page.paper_summary }}</p>
     <a class="action action--on-ink" href="{{ '/white-paper/' | relative_url }}">{{ page.paper_cta_label }} →</a>
