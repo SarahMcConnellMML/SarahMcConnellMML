@@ -5,7 +5,7 @@ title: AI Readiness Pre-Investment Review
 eyebrow: "Flagship engagement"
 tagline: "A readiness verdict across six domains before you commit serious investment. The only offer that produces one."
 price: "£25,000"
-timeframe: "4 to 6 weeks elapsed, 8 to 10 hours per week"
+timeframe: "4 to 6 weeks elapsed"
 format: "Interviews, document review, structured debrief"
 description: "A six-domain AI readiness assessment producing a clear verdict on where you will break and what to fix in what order. £25,000, billed 50% on signature."
 
