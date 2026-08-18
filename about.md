@@ -2,11 +2,11 @@
 layout: page
 permalink: /about/
 title: About
-description: "Sarah's background in agile coaching and delivery, and why she started MML to diagnose what's underneath AI initiatives before they're built on."
+description: "Sarah McConnell — agile coach and organisational diagnostician, founder of MML."
 banner_include: banner-about.html
 ---
 
-I spent years inside organisations running agile transformations. The pattern was always the same. Teams got their sprints, their stand ups, their certificates. Leadership kept making decisions exactly the way it always had, with new vocabulary stuck on top. The problems teams raised in retrospectives, unclear priorities, unresolved dependencies, technical debt nobody wanted to own, got written down and left there, because fixing them needed authority that sat above the team.
+I spent years inside organisations running agile transformations. The pattern was always the same. Teams got their sprints, their stand ups, their certificates. Leadership kept making decisions exactly the way it always had, with new vocabulary stuck on top. The problems teams raised in retrospectives — unclear priorities, unresolved dependencies, technical debt nobody wanted to own — got written down and left there, because fixing them needed authority that sat above the team.
 
 I'm watching the same thing happen with AI now, compressed into months instead of years, and considerably more expensive to get wrong.
 

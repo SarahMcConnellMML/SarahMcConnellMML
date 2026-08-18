@@ -1,13 +1,9 @@
 title: Measure Model Lead
-tagline: "[SITE TAGLINE PLACEHOLDER]"
-description: "[SITE META DESCRIPTION PLACEHOLDER - one or two sentences, used by search engines and link previews]"
+description: "MML diagnoses why AI initiatives stall — operating model, governance, data quality, decision rights and leadership — before any transformation work begins."
 url: "https://measuremodellead.co.uk"
 baseurl: ""
-
-# Used in the footer and in page titles. Replace with whatever you'd like
-# to appear in the browser tab, e.g. "Measure Model Lead | AI Readiness for Organisations"
-author: "[YOUR NAME PLACEHOLDER]"
-contact_email: "[CONTACT EMAIL PLACEHOLDER]"
+author: "Sarah McConnell"
+contact_email: "sarah.mcconnell@measuremodellead.co.uk"
 
 markdown: kramdown
 kramdown:
@@ -16,16 +12,10 @@ kramdown:
 
 permalink: /blog/:title/
 
-# These three plugins are all on GitHub's approved list, so GitHub Pages
-# will build them automatically. You don't need to install anything.
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-
-collections:
-  posts:
-    output: true
 
 defaults:
   - scope:
@@ -38,8 +28,6 @@ defaults:
     values:
       layout: "page"
 
-# Files in this list are kept in the project for your own reference but
-# will not be turned into pages on the live site.
 exclude:
   - SETUP-GUIDE.md
   - README.md
