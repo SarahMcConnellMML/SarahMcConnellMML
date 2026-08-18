@@ -23,8 +23,8 @@ offer_baseline_summary: "An 18-question scored assessment with a written report 
 offer_diagnostic_summary: "A full six-domain assessment producing a heat map of organisational readiness, backed by a structured debrief."
 offer_learn_more_label: "See how this works"
 
-credibility_text: "Built by Sarah, an agile coach and organisational diagnostician who spent her career inside delivery organisations watching this exact failure pattern play out — first with agile, now with AI."
-credibility_link_label: "More on the About page →"
+credibility_text: "Strategy firms assess this from the outside. Technology firms assess the stack. MML doesn't sell implementation, tooling, platform builds or resource — and nobody who assesses your readiness should have a commercial interest in the answer being yes."
+credibility_link_label: "About Sarah →"
 
 closing_cta_baseline_label: "Start with the Baseline"
 closing_cta_baseline_url: "/ai-baseline/"
@@ -38,6 +38,8 @@ paper_headline: "Agility in the Age of AI"
 paper_summary: "The white paper behind the diagnostic framework — what the research says, and what it means for organisations trying to make AI investments that actually hold."
 paper_cta_label: "Read the paper"
 ---
-Independent research keeps landing on the same number. MIT's 2025 review of AI initiatives found 95% delivered no measurable financial return. RAND puts the failure rate above 80%. The tools aren't the problem. What they're being run on top of usually is.
+PwC asked 4,454 CEOs across 95 countries how AI was performing for them. 12% were getting both revenue growth and cost savings. 56% were getting neither.
+
+The tools mostly work. What they cannot do is fix the organisation they land in. AI cannot optimise a broken process, it can only run it faster. Data spread across functions with no reason to share it produces confident answers built on an incomplete picture. A decision that took six weeks to make before AI arrived still takes six weeks afterwards. BCG's research across 1,000 executives puts around 70% of the AI challenge on people and process, and 10% on the algorithms. Most organisations discover this during implementation, when it is expensive to fix.
 
 MML doesn't sell AI tools and doesn't write AI strategy. The work is diagnostic: establishing whether the operating model, governance, data and decision rights underneath an AI investment can actually carry it. That diagnosis comes first. Everything built afterwards depends on it being accurate.

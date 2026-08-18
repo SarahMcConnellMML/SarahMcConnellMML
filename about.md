@@ -16,4 +16,8 @@ I started MML to do the part of this work most organisations skip. Not picking t
 
 <div class="eyebrow">Background</div>
 
-My background is agile coaching and delivery, including time at Jaguar Land Rover and Dyson. I currently work full time at Entain, inside a large organisation working through its own AI adoption in real time, which keeps the diagnosis grounded in what's actually happening on the ground rather than theory.
+I started my career within GCHQ. Security and governance were approached first and held in mind through the entire delivery process — what could go wrong, who was accountable, and what a process or system was permitted to do were questions you answered before you built anything. AI needs those questions asked up front, not bolted on once a pilot has gone well.
+
+From there I moved into agile coaching and delivery, leading transformations at Jaguar Land Rover, Dyson and Entain — three completely different industries, and the same things blocked all of them. I spent years embedded inside those programmes seeing what an organisation actually does rather than the version that gets reported upward. The six assessment domains come from that experience. They are not a framework I designed; they are what stopped those transformations, and they are the same failure patterns AI is now landing on.
+
+I currently work at Entain, inside a large organisation working through its own AI adoption in real time, which keeps the diagnosis grounded in what's actually happening on the ground rather than theory.
