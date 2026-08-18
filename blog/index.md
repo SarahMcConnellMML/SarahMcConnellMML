@@ -2,8 +2,8 @@
 layout: blog
 permalink: /blog/
 title: Insights
-eyebrow: "[INSIGHTS INDEX EYEBROW PLACEHOLDER]"
-description: "[INSIGHTS INDEX META DESCRIPTION PLACEHOLDER]"
+eyebrow: "Insights"
+description: "Writing on AI readiness, organisational diagnostics, and the patterns that keep showing up inside professional services firms trying to make AI work."
 ---
 
-[INSIGHTS INDEX INTRO PLACEHOLDER — one short paragraph framing what this section is and what kind of writing lives here. The list of posts appears automatically below this.]
+Writing on AI readiness, organisational diagnostics, and the patterns that keep showing up inside professional services firms trying to make AI work.
