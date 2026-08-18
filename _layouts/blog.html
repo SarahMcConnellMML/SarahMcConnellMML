@@ -3,10 +3,9 @@ layout: default
 ---
 <div class="section">
   <div class="container prose">
-    <div class="eyebrow">{{ page.eyebrow }}</div>
+    {% if page.eyebrow %}<div class="eyebrow">{{ page.eyebrow }}</div>{% endif %}
     <h1>{{ page.title }}</h1>
     {{ content }}
-
     <ul class="post-list">
       {% for post in site.posts %}
       <li>
@@ -15,7 +14,7 @@ layout: default
         <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
       </li>
       {% else %}
-      <li><p class="post-excerpt">[NO POSTS PUBLISHED YET PLACEHOLDER — add Markdown files to the _posts folder to see them listed here]</p></li>
+      <li><p class="post-excerpt">No posts yet.</p></li>
       {% endfor %}
     </ul>
   </div>

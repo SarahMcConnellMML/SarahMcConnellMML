@@ -19,36 +19,31 @@ layout: default
   </div>
 </section>
 
-{% if page.how_it_works_steps %}
-<section class="section">
-  <div class="container prose">
-    {% if page.how_it_works_eyebrow %}<div class="eyebrow">{{ page.how_it_works_eyebrow }}</div>{% endif %}
-    <ol class="offer-steps">
-      {% for step in page.how_it_works_steps %}
-      <li>{{ step }}</li>
-      {% endfor %}
-    </ol>
-  </div>
-</section>
-{% endif %}
-
-<section class="section">
+<section class="section" style="padding-top:0;">
   <div class="container">
     {% if page.offers_eyebrow %}<div class="eyebrow">{{ page.offers_eyebrow }}</div>{% endif %}
     {% if page.offers_headline %}<h2>{{ page.offers_headline }}</h2>{% endif %}
-    <div class="offer-grid">
+    <div class="offer-grid offer-grid--three">
       <div class="offer-card">
-        <h3>AI Baseline</h3>
-        <div class="price">£1,500</div>
-        <p>{{ page.offer_baseline_summary }}</p>
-        <a class="action--quiet" href="{{ '/ai-baseline/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+        <div class="offer-card__tag">Start here</div>
+        <h3>Partner-Group Decisions Workshop</h3>
+        <span class="price">£5,000</span>
+        <p>Half a day with your partnership on what AI is permitted to do, who is accountable, and what stays human.</p>
+        <a class="action--quiet" href="{{ '/partner-group-workshop/' | relative_url }}">See how this works →</a>
         {% include stripe-card.html %}
       </div>
       <div class="offer-card">
-        <h3>AI Readiness Diagnostic</h3>
-        <div class="price">£25,000</div>
-        <p>{{ page.offer_diagnostic_summary }}</p>
-        <a class="action--quiet" href="{{ '/ai-readiness-diagnostic/' | relative_url }}">{{ page.offer_learn_more_label }} →</a>
+        <h3>AI Readiness Pre-Investment Review</h3>
+        <span class="price">£25,000</span>
+        <p>A readiness verdict across six domains before you commit serious investment. The only offer that produces one.</p>
+        <a class="action--quiet" href="{{ '/ai-pre-investment-review/' | relative_url }}">See how this works →</a>
+        {% include stripe-card.html %}
+      </div>
+      <div class="offer-card">
+        <h3>Partner Advisory Retainer</h3>
+        <span class="price">£1,750/month</span>
+        <p>Impartial judgment on demand throughout your AI programme. Follows a diagnostic or workshop.</p>
+        <a class="action--quiet" href="{{ '/partner-advisory-retainer/' | relative_url }}">See how this works →</a>
         {% include stripe-card.html %}
       </div>
     </div>
@@ -56,18 +51,9 @@ layout: default
 </section>
 
 {% if page.credibility_text %}
-<section class="section">
+<section class="section" style="padding-top:0; border-top: 1px solid rgba(10,61,58,0.1);">
   <div class="container prose">
-    <p>{{ page.credibility_text }} <a href="{{ '/about/' | relative_url }}">{{ page.credibility_link_label }}</a></p>
-  </div>
-</section>
-{% endif %}
-
-{% if page.closing_cta_baseline_label %}
-<section class="section">
-  <div class="container prose" style="display:flex; gap: var(--space-3); flex-wrap: wrap; align-items:center;">
-    <a class="action" href="{{ page.closing_cta_baseline_url | default: '/ai-baseline/' }}">{{ page.closing_cta_baseline_label }} →</a>
-    <a class="action--quiet" href="{{ page.closing_cta_call_url | default: '#' }}">{{ page.closing_cta_call_label }} →</a>
+    <p>{{ page.credibility_text }} <a class="action--quiet" href="{{ '/about/' | relative_url }}">{{ page.credibility_link_label }}</a></p>
   </div>
 </section>
 {% endif %}
@@ -86,17 +72,17 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-    <p style="margin-top: var(--space-3);"><a class="action--quiet" href="{{ '/blog/' | relative_url }}">{{ page.insights_view_all_label }} →</a></p>
+    <p style="margin-top: var(--space-3);"><a class="action--quiet" href="{{ '/blog/' | relative_url }}">View all insights →</a></p>
   </div>
 </section>
 {% endif %}
 
-<section class="section section--ink">
-  {% include band-graphic.html kind="dark" %}
-  <div class="container prose">
-    {% if page.paper_eyebrow %}<div class="eyebrow">{{ page.paper_eyebrow }}</div>{% endif %}
+<section class="section section--dark">
+  {% include band-graphic.html %}
+  <div class="container prose" style="position:relative; z-index:1;">
+    {% if page.paper_eyebrow %}<div class="eyebrow" style="color:var(--parchment);">{{ page.paper_eyebrow }}</div>{% endif %}
     <h2>{{ page.paper_headline }}</h2>
     <p>{{ page.paper_summary }}</p>
-    <a class="action action--on-ink" href="{{ '/white-paper/' | relative_url }}">{{ page.paper_cta_label }} →</a>
+    <a class="action action--on-dark" href="{{ '/white-paper/' | relative_url }}">{{ page.paper_cta_label }} →</a>
   </div>
 </section>

@@ -1,19 +1,23 @@
 /* ==========================================================================
-   MML — base tokens
+   MML — design tokens
    ========================================================================== */
 
 :root {
+  /* Structural */
   --ink-teal: #0A3D3A;
   --charcoal: #1B1B1A;
-  --ochre: #A87C2C;
-  --parchment: #E8D5A3;
   --off-white: #F7F2E9;
+
+  /* Accent palette — pulled from LinkedIn banner */
+  --burgundy: #6E1F2A;
+  --navy: #141830;
+  --parchment: #E8D5A3;
 
   --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 
-  --measure: 38rem;        /* comfortable reading width for body copy */
-  --measure-wide: 64rem;   /* wider container for nav, hero, offer comparisons */
+  --measure: 38rem;
+  --measure-wide: 64rem;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -22,20 +26,12 @@
   --space-5: 5rem;
   --space-6: 8rem;
 
-  /* Tiled SVG grain — paper-texture accent, not an image asset */
   --noise-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-
-  /* Coarser grain used inside the banner graphics, for an aged-paper feel */
   --noise-coarse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='4' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23t)'/%3E%3C/svg%3E");
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 
 body {
   position: relative;
@@ -61,23 +57,18 @@ body::after {
   mix-blend-mode: multiply;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img { max-width: 100%; display: block; }
 
 a {
   color: var(--ink-teal);
-  text-decoration-color: var(--ochre);
+  text-decoration-color: var(--burgundy);
   text-underline-offset: 0.18em;
 }
 
-a:hover {
-  color: var(--ochre);
-}
+a:hover { color: var(--burgundy); }
 
 :focus-visible {
-  outline: 2px solid var(--ochre);
+  outline: 2px solid var(--burgundy);
   outline-offset: 3px;
 }
 
@@ -92,7 +83,6 @@ h1, h2, h3, h4 {
 h1 { font-size: clamp(2.1rem, 4.5vw, 3.4rem); font-weight: 600; }
 h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
 h3 { font-size: 1.3rem; }
-
 p { margin: 0 0 var(--space-3) 0; }
 
 .container {
@@ -103,14 +93,10 @@ p { margin: 0 0 var(--space-3) 0; }
   padding: 0 var(--space-3);
 }
 
-.prose {
-  max-width: var(--measure);
-}
+.prose { max-width: var(--measure); }
 
 /* ==========================================================================
-   Signature device — the eyebrow + rule
-   Used wherever a section needs a quiet diagnostic label rather than
-   a decorative heading. This is the one recurring motif across the site.
+   Eyebrow
    ========================================================================== */
 
 .eyebrow {
@@ -123,15 +109,15 @@ p { margin: 0 0 var(--space-3) 0; }
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ochre);
+  color: var(--burgundy);
 }
 
 .eyebrow::after {
   content: "";
   flex: 1 1 auto;
   height: 1px;
-  background: var(--ochre);
-  opacity: 0.45;
+  background: var(--burgundy);
+  opacity: 0.35;
 }
 
 hr.rule {
@@ -166,9 +152,7 @@ hr.rule {
   letter-spacing: 0.01em;
 }
 
-.site-logo span {
-  color: var(--ochre);
-}
+.site-logo span { color: var(--burgundy); }
 
 .site-nav ul {
   display: flex;
@@ -188,16 +172,13 @@ hr.rule {
   padding-bottom: 2px;
 }
 
-.site-nav a:hover,
-.site-nav a.active {
+.site-nav a:hover, .site-nav a.active {
   color: var(--ink-teal);
-  border-bottom-color: var(--ochre);
+  border-bottom-color: var(--burgundy);
 }
 
 /* ==========================================================================
-   Buttons / links-as-actions
-   Deliberately not button-shaped chrome with shadows — a quiet, flat
-   invitation rather than a sales CTA.
+   Buttons
    ========================================================================== */
 
 .action {
@@ -214,34 +195,26 @@ hr.rule {
   background: transparent;
 }
 
-.action:hover {
-  background: var(--ink-teal);
-  color: var(--off-white);
-}
+.action:hover { background: var(--ink-teal); color: var(--off-white); }
 
 .action--quiet {
   border: none;
   padding: 0;
   color: var(--ink-teal);
   text-decoration: underline;
-  text-decoration-color: var(--ochre);
+  text-decoration-color: var(--burgundy);
   text-underline-offset: 0.2em;
+  font-weight: 600;
 }
 
-.action--quiet:hover {
-  color: var(--ochre);
-  background: none;
-}
+.action--quiet:hover { color: var(--burgundy); background: none; }
 
-.action--on-ink {
+.action--on-dark {
   border-color: var(--off-white);
   color: var(--off-white);
 }
 
-.action--on-ink:hover {
-  background: var(--off-white);
-  color: var(--ink-teal);
-}
+.action--on-dark:hover { background: var(--off-white); color: var(--navy); }
 
 /* ==========================================================================
    Hero
@@ -253,18 +226,9 @@ hr.rule {
   padding: var(--space-6) 0 var(--space-5);
 }
 
-.hero .eyebrow {
-  justify-content: flex-start;
-}
-
-.hero .eyebrow::after {
-  flex: 0 0 4rem;
-}
-
-.hero h1 {
-  max-width: 42rem;
-}
-
+.hero .eyebrow { justify-content: flex-start; }
+.hero .eyebrow::after { flex: 0 0 4rem; }
+.hero h1 { max-width: 42rem; }
 .hero .lede {
   max-width: var(--measure);
   font-size: 1.2rem;
@@ -275,21 +239,20 @@ hr.rule {
    Sections
    ========================================================================== */
 
-.section {
-  position: relative;
-  padding: var(--space-5) 0;
-}
+.section { position: relative; padding: var(--space-5) 0; }
 
-.section--ink {
-  background: var(--ink-teal);
+.section--dark {
+  background: var(--navy);
   color: var(--off-white);
 }
 
-.section--ink::after {
+.section--dark h2, .section--dark h3 { color: var(--off-white); }
+.section--dark a { color: var(--parchment); }
+.section--dark::after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background-image: var(--noise-tile);
   background-repeat: repeat;
@@ -298,24 +261,11 @@ hr.rule {
   mix-blend-mode: overlay;
 }
 
-.section--ink h2,
-.section--ink h3 {
-  color: var(--off-white);
-}
-
-.section--ink a {
-  color: var(--parchment);
-}
-
 /* ==========================================================================
-   Signature graphic system — built from the brand banner concept (the
-   rounded dark form, gold triangle line art, aged-paper texture, diagonal
-   cut, three-line stripe). Each spot on the site gets its own dedicated
-   arrangement of the same elements rather than a single repeated template.
+   Graphic system
    ========================================================================== */
 
-/* ---- hero graphic: full strength, confined to the right ~38% so it never
-   crosses the headline text ---- */
+/* --- hero graphic: blob top-right, cut bottom-right, linework, stripe --- */
 
 .hero-graphic {
   position: absolute;
@@ -351,7 +301,7 @@ hr.rule {
   bottom: 0;
   width: 38%;
   height: 62%;
-  background: var(--ink-teal);
+  background: var(--burgundy);
   clip-path: polygon(45% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
@@ -378,21 +328,19 @@ hr.rule {
   transform: rotate(-2.5deg);
 }
 
-.hero-graphic .stripe-trio .l1 { height: 3.5px; background: var(--ochre); margin-bottom: 4px; }
-.hero-graphic .stripe-trio .l2 { height: 2px; background: #1D4F49; margin-bottom: 4px; }
-.hero-graphic .stripe-trio .l3 { height: 2px; background: var(--parchment); }
+.hero-graphic .stripe-trio .l1 { height: 3.5px; background: var(--parchment); margin-bottom: 4px; display: block; }
+.hero-graphic .stripe-trio .l2 { height: 2px; background: var(--charcoal); margin-bottom: 4px; display: block; }
+.hero-graphic .stripe-trio .l3 { height: 2px; background: var(--burgundy); display: block; }
 
-/* a standalone banner strip for pages that aren't a hero with text overlaid
-   directly on it (About, white paper) — a fixed-ish height so it doesn't
-   stretch across the whole length of the page's prose content below it */
+/* --- page banner strip (About, white paper) --- */
+
 .page-banner {
   position: relative;
   height: clamp(140px, 20vw, 220px);
   overflow: hidden;
 }
 
-/* ---- About page banner: blob bottom-right, cut on the left, stripe upper-middle ---- */
-
+/* About: blob bottom-right, cut left, stripe upper-middle */
 .about-banner-graphic {
   position: absolute;
   inset: 0;
@@ -416,7 +364,7 @@ hr.rule {
   width: 48%;
   height: 120%;
   border-radius: 50%;
-  background: var(--charcoal);
+  background: var(--burgundy);
 }
 
 .about-banner-graphic .cut {
@@ -425,7 +373,7 @@ hr.rule {
   top: 0;
   width: 46%;
   height: 100%;
-  background: var(--ink-teal);
+  background: var(--charcoal);
   clip-path: polygon(0% 0%, 100% 0%, 55% 100%, 0% 100%);
 }
 
@@ -439,10 +387,7 @@ hr.rule {
   clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
 }
 
-.about-banner-graphic .linework {
-  position: absolute;
-  inset: 0;
-}
+.about-banner-graphic .linework { position: absolute; inset: 0; }
 
 .about-banner-graphic .stripe-trio {
   position: absolute;
@@ -452,12 +397,11 @@ hr.rule {
   transform: rotate(2deg);
 }
 
-.about-banner-graphic .stripe-trio .l1 { height: 3.5px; background: var(--ochre); margin-bottom: 4px; }
-.about-banner-graphic .stripe-trio .l2 { height: 2px; background: #1D4F49; margin-bottom: 4px; }
-.about-banner-graphic .stripe-trio .l3 { height: 2px; background: var(--parchment); }
+.about-banner-graphic .stripe-trio .l1 { height: 3.5px; background: var(--parchment); margin-bottom: 4px; display: block; }
+.about-banner-graphic .stripe-trio .l2 { height: 2px; background: var(--charcoal); margin-bottom: 4px; display: block; }
+.about-banner-graphic .stripe-trio .l3 { height: 2px; background: var(--burgundy); display: block; }
 
-/* ---- White paper page banner: steep cut, blob bottom-left, stripe through the lower third ---- */
-
+/* White paper: cut top-right, blob bottom-left, stripe lower-left */
 .paper-banner-graphic {
   position: absolute;
   inset: 0;
@@ -481,7 +425,7 @@ hr.rule {
   width: 36%;
   height: 110%;
   border-radius: 50%;
-  background: var(--charcoal);
+  background: var(--burgundy);
 }
 
 .paper-banner-graphic .cut {
@@ -490,7 +434,7 @@ hr.rule {
   right: 0;
   width: 100%;
   height: 60%;
-  background: var(--ink-teal);
+  background: var(--charcoal);
   clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
@@ -504,10 +448,7 @@ hr.rule {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
 }
 
-.paper-banner-graphic .linework {
-  position: absolute;
-  inset: 0;
-}
+.paper-banner-graphic .linework { position: absolute; inset: 0; }
 
 .paper-banner-graphic .stripe-trio {
   position: absolute;
@@ -517,13 +458,12 @@ hr.rule {
   transform: rotate(-1.5deg);
 }
 
-.paper-banner-graphic .stripe-trio .l1 { height: 3.5px; background: var(--ochre); margin-bottom: 4px; }
-.paper-banner-graphic .stripe-trio .l2 { height: 2px; background: var(--parchment); margin-bottom: 4px; }
-.paper-banner-graphic .stripe-trio .l3 { height: 2px; background: #1D4F49; }
+.paper-banner-graphic .stripe-trio .l1 { height: 3.5px; background: var(--parchment); margin-bottom: 4px; display: block; }
+.paper-banner-graphic .stripe-trio .l2 { height: 2px; background: var(--charcoal); display: block; }
 
-/* ---- dark band: CTA sections, footer — cream blob fragment + small stripe ---- */
+/* --- dark band graphic (CTA sections, footer) --- */
 
-.band-graphic--dark {
+.band-graphic {
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -531,28 +471,18 @@ hr.rule {
   pointer-events: none;
 }
 
-.band-graphic--dark .blob-cream {
+.band-graphic .blob-cream {
   position: absolute;
   top: -30%;
   left: -6%;
   width: 30%;
   height: 160%;
   border-radius: 50%;
-  background: var(--parchment);
-  opacity: 0.9;
+  background: var(--burgundy);
+  opacity: 0.85;
 }
 
-.band-graphic--dark .blob-cream::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-image: var(--noise-coarse);
-  opacity: 0.25;
-  mix-blend-mode: multiply;
-}
-
-.band-graphic--dark .stripe-trio {
+.band-graphic .stripe-trio {
   position: absolute;
   right: 6%;
   bottom: 18%;
@@ -560,27 +490,19 @@ hr.rule {
   transform: rotate(-2deg);
 }
 
-.band-graphic--dark .stripe-trio .l1 { height: 3px; background: var(--ochre); margin-bottom: 3px; }
-.band-graphic--dark .stripe-trio .l2 { height: 1.5px; background: var(--parchment); margin-bottom: 3px; }
-.band-graphic--dark .stripe-trio .l3 { height: 1.5px; background: var(--off-white); opacity: 0.6; }
+.band-graphic .stripe-trio .l1 { height: 3px; background: var(--charcoal); margin-bottom: 3px; display: block; }
+.band-graphic .stripe-trio .l2 { height: 1.5px; background: var(--parchment); margin-bottom: 3px; display: block; }
+.band-graphic .stripe-trio .l3 { height: 1.5px; background: rgba(247, 242, 233, 0.4); display: block; }
 
-/* ---- line divider: recognition section, offer page headers — three stacked
-   rules sitting in the normal text flow, not overlaid on top of anything,
-   so there's no risk of crossing the text itself ---- */
+/* --- line divider (recognition section, offer page headers) --- */
 
-.line-divider {
-  margin-top: var(--space-3);
-}
-
-.line-divider span {
-  display: block;
-}
-
+.line-divider { margin-top: var(--space-3); }
+.line-divider span { display: block; }
 .line-divider .l1 { height: 5px; width: 100%; background: var(--ink-teal); margin-bottom: 6px; }
-.line-divider .l2 { height: 2px; width: 72%; background: var(--ochre); margin-bottom: 6px; }
+.line-divider .l2 { height: 2px; width: 72%; background: var(--burgundy); margin-bottom: 6px; }
 .line-divider .l3 { height: 5px; width: 45%; background: var(--parchment); }
 
-/* ---- card / small element: offer cards — just the stripe ---- */
+/* --- card stripe (offer cards) --- */
 
 .stripe-card {
   position: absolute;
@@ -589,14 +511,13 @@ hr.rule {
   width: 6rem;
   transform: rotate(-1.5deg);
   pointer-events: none;
-  z-index: 0;
 }
 
-.stripe-card .l1 { height: 2.5px; background: var(--ochre); margin-bottom: 2px; }
-.stripe-card .l2 { height: 1px; background: var(--parchment); }
+.stripe-card .l1 { height: 2.5px; background: var(--charcoal); margin-bottom: 2px; display: block; }
+.stripe-card .l2 { height: 1px; background: var(--parchment); display: block; }
 
 /* ==========================================================================
-   Offer teaser cards (homepage)
+   Offer cards (homepage)
    ========================================================================== */
 
 .offer-grid {
@@ -606,26 +527,26 @@ hr.rule {
   margin-top: var(--space-4);
 }
 
-@media (max-width: 700px) {
-  .offer-grid { grid-template-columns: 1fr; }
-}
+@media (max-width: 700px) { .offer-grid { grid-template-columns: 1fr; } }
 
 .offer-card {
   position: relative;
   border: 1px solid rgba(10, 61, 58, 0.18);
   padding: var(--space-4);
   background: var(--off-white);
+  overflow: hidden;
 }
 
 .offer-card .price {
   font-family: var(--font-serif);
   font-size: 1.4rem;
-  color: var(--ochre);
+  color: var(--burgundy);
   margin-bottom: var(--space-2);
+  display: block;
 }
 
 /* ==========================================================================
-   Offer page (full detail)
+   Offer page
    ========================================================================== */
 
 .offer-header {
@@ -652,9 +573,7 @@ hr.rule {
   margin-bottom: 0.2em;
 }
 
-.offer-meta dd {
-  margin: 0;
-}
+.offer-meta dd { margin: 0; }
 
 .offer-steps {
   list-style: none;
@@ -677,8 +596,8 @@ hr.rule {
   top: 0.05em;
   width: 1.8rem;
   height: 1.8rem;
-  border: 1px solid var(--ochre);
-  color: var(--ochre);
+  border: 1px solid var(--burgundy);
+  color: var(--burgundy);
   font-family: var(--font-serif);
   font-weight: 600;
   display: flex;
@@ -688,7 +607,7 @@ hr.rule {
 }
 
 /* ==========================================================================
-   Blog index + post
+   Blog
    ========================================================================== */
 
 .post-list {
@@ -705,59 +624,43 @@ hr.rule {
 .post-list time {
   display: block;
   font-size: 0.85rem;
-  color: var(--ochre);
+  color: var(--burgundy);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 0.3em;
 }
 
-.post-list h3 {
-  margin-bottom: 0.3em;
-}
+.post-list h3 { margin-bottom: 0.3em; }
+.post-list h3 a { text-decoration: none; color: var(--ink-teal); }
+.post-excerpt { color: var(--charcoal); margin: 0; }
 
-.post-list h3 a {
-  text-decoration: none;
-  color: var(--ink-teal);
-}
-
-.post-excerpt {
-  color: var(--charcoal);
-  margin: 0;
-}
-
-.post-header {
-  padding: var(--space-5) 0 var(--space-3);
-}
+.post-header { padding: var(--space-5) 0 var(--space-3); }
 
 .post-header time {
   display: block;
   font-size: 0.85rem;
-  color: var(--ochre);
+  color: var(--burgundy);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: var(--space-2);
 }
 
-.post-body {
-  max-width: var(--measure);
-  font-size: 1.08rem;
-}
-
+.post-body { max-width: var(--measure); font-size: 1.08rem; }
 .post-body h2 { margin-top: var(--space-4); }
 
-.prose blockquote {
+.post-body blockquote, .prose blockquote {
   margin: var(--space-4) 0;
   padding-left: var(--space-3);
-  border-left: 3px solid var(--ochre);
+  border-left: 3px solid var(--burgundy);
   font-family: var(--font-serif);
   font-size: 1.2rem;
   color: var(--ink-teal);
 }
 
 /* ==========================================================================
-   White paper page
+   White paper
    ========================================================================== */
 
 .paper-cover {
@@ -773,7 +676,7 @@ hr.rule {
 
 .site-footer {
   position: relative;
-  background: var(--ink-teal);
+  background: var(--navy);
   color: var(--off-white);
   padding: var(--space-4) 0;
   margin-top: var(--space-6);
@@ -783,7 +686,7 @@ hr.rule {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background-image: var(--noise-tile);
   background-repeat: repeat;
@@ -792,14 +695,36 @@ hr.rule {
   mix-blend-mode: overlay;
 }
 
-.site-footer a {
-  color: var(--parchment);
-}
+.site-footer a { color: var(--parchment); }
 
 .site-footer .container {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: var(--space-2);
   font-size: 0.9rem;
+}
+
+/* Three-column offer grid */
+.offer-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .offer-grid--three { grid-template-columns: 1fr; }
+}
+
+/* "Start here" tag on the lead offer card */
+.offer-card__tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--off-white);
+  background: var(--burgundy);
+  padding: 0.2em 0.6em;
+  margin-bottom: var(--space-2);
 }
