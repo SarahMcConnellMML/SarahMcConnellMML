@@ -8,10 +8,6 @@ description: "Sarah McConnell speaks on AI readiness for professional services f
 
 I speak on AI readiness for professional services firms — what the research actually says about AI returns, why the failure rate is where it is, and what firms need to sort out before they commit serious investment.
 
-I'm looking to speak at ICAEW and CIOT regional branches and practice management conferences, where the room tends to be full of managing partners and practice leaders, exactly where this conversation belongs.
-
-If you are organising an event and the topic fits, get in touch.
-
 <hr class="rule">
 
 <div class="eyebrow">What I talk about</div>
