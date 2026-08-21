@@ -11,8 +11,8 @@ description: "A half-day workshop for partnership groups on AI permissions, acco
 
 cta_headline: "Book the workshop"
 cta_body: "This is the right starting point for most firms — a structured conversation before any AI programme is running, with the people who need to be in the room."
-cta_label: "Book an introduction call"
-cta_url: "https://tidycal.com/sarahmcconnell/introduction-call"
+cta_label: "Get in touch"
+cta_url: "#"
 ---
 
 <div class="eyebrow">What it covers</div>

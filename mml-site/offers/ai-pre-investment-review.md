@@ -11,8 +11,8 @@ description: "A six-domain AI readiness assessment producing a clear verdict on 
 
 cta_headline: "Start a conversation"
 cta_body: "If any of this sounds familiar, I am always happy to have a conversation about it, whether or not it goes anywhere."
-cta_label: "Book an introduction call"
-cta_url: "https://tidycal.com/sarahmcconnell/introduction-call"
+cta_label: "Get in touch"
+cta_url: "#"
 ---
 
 <div class="eyebrow">When it's worth doing</div>

@@ -1,0 +1,88 @@
+---
+layout: default
+---
+<section class="hero">
+  {% include hero-graphic.html %}
+  <div class="container prose">
+    {% if page.hero_eyebrow %}<div class="eyebrow">{{ page.hero_eyebrow }}</div>{% endif %}
+    <h1>{{ page.hero_headline }}</h1>
+    <p class="lede">{{ page.hero_subhead }}</p>
+    <a class="action" href="{{ page.hero_cta_url }}">{{ page.hero_cta_label }} →</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {% if page.recognition_eyebrow %}<div class="eyebrow">{{ page.recognition_eyebrow }}</div>{% endif %}
+    {{ content }}
+    {% include line-divider.html %}
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    {% if page.offers_eyebrow %}<div class="eyebrow">{{ page.offers_eyebrow }}</div>{% endif %}
+    {% if page.offers_headline %}<h2>{{ page.offers_headline }}</h2>{% endif %}
+    <div class="offer-grid offer-grid--three">
+      <div class="offer-card">
+        <div class="offer-card__tag">Start here</div>
+        <h3>Partner-Group Decisions Workshop</h3>
+        <span class="price">£5,000</span>
+        <p>Half a day with your partnership on what AI is permitted to do, who is accountable, and what stays human.</p>
+        <a class="action--quiet" href="{{ '/partner-group-workshop/' | relative_url }}">See how this works →</a>
+        {% include stripe-card.html %}
+      </div>
+      <div class="offer-card">
+        <h3>AI Readiness Pre-Investment Review</h3>
+        <span class="price">£25,000</span>
+        <p>A readiness verdict across six domains before you commit serious investment. The only offer that produces one.</p>
+        <a class="action--quiet" href="{{ '/ai-pre-investment-review/' | relative_url }}">See how this works →</a>
+        {% include stripe-card.html %}
+      </div>
+      <div class="offer-card">
+        <h3>Partner Advisory Retainer</h3>
+        <span class="price">£1,750/month</span>
+        <p>Impartial judgment on demand throughout your AI programme. Follows a diagnostic or workshop.</p>
+        <a class="action--quiet" href="{{ '/partner-advisory-retainer/' | relative_url }}">See how this works →</a>
+        {% include stripe-card.html %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if page.credibility_text %}
+<section class="section" style="padding-top:0; border-top: 1px solid rgba(10,61,58,0.1);">
+  <div class="container prose">
+    <p>{{ page.credibility_text }} <a class="action--quiet" href="{{ '/about/' | relative_url }}">{{ page.credibility_link_label }}</a></p>
+  </div>
+</section>
+{% endif %}
+
+{% if site.posts.size > 0 %}
+<section class="section">
+  <div class="container">
+    {% if page.insights_eyebrow %}<div class="eyebrow">{{ page.insights_eyebrow }}</div>{% endif %}
+    {% if page.insights_headline %}<h2>{{ page.insights_headline }}</h2>{% endif %}
+    <ul class="post-list">
+      {% for post in site.posts limit: 3 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top: var(--space-3);"><a class="action--quiet" href="{{ '/blog/' | relative_url }}">View all insights →</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--dark">
+  {% include band-graphic.html %}
+  <div class="container prose" style="position:relative; z-index:1;">
+    {% if page.paper_eyebrow %}<div class="eyebrow" style="color:var(--parchment);">{{ page.paper_eyebrow }}</div>{% endif %}
+    <h2>{{ page.paper_headline }}</h2>
+    <p>{{ page.paper_summary }}</p>
+    <a class="action action--on-dark" href="{{ '/white-paper/' | relative_url }}">{{ page.paper_cta_label }} →</a>
+  </div>
+</section>

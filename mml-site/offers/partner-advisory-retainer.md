@@ -12,7 +12,7 @@ description: "Monthly retainer giving a managing partner access to independent A
 cta_headline: "Talk about a retainer"
 cta_body: "The retainer follows a diagnostic or a workshop rather than leading. If you have already worked together and want ongoing access, get in touch."
 cta_label: "Get in touch"
-cta_url: "mailto:sarah.mcconnell@measuremodellead.co.uk"
+cta_url: "#"
 ---
 
 <div class="eyebrow">What this is</div>
