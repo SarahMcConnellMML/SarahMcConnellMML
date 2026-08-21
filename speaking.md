@@ -3,12 +3,12 @@ layout: page
 permalink: /speaking/
 title: Speaking
 eyebrow: "Speaking"
-description: "Sarah McConnell speaks on AI readiness for professional services firms at ICAEW and CIOT regional branches and practice management conferences."
+description: "Sarah McConnell speaks on AI readiness for professional services firms."
 ---
 
 I speak on AI readiness for professional services firms — what the research actually says about AI returns, why the failure rate is where it is, and what firms need to sort out before they commit serious investment.
 
-Current venues include ICAEW and CIOT regional branches and practice management conferences. The room tends to be full of managing partners and practice leaders, which is exactly where this conversation belongs.
+I'm looking to speak at ICAEW and CIOT regional branches and practice management conferences, where the room tends to be full of managing partners and practice leaders, exactly where this conversation belongs.
 
 If you are organising an event and the topic fits, get in touch.
 
