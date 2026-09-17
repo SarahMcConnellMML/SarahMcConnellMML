@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+banner_include: banner-about.html
 ---
 
 <div class="about-hero">
