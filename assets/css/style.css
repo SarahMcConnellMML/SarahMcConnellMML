@@ -670,6 +670,76 @@ hr.rule {
   max-width: 22rem;
 }
 
+/* White paper page - the email form replaces the direct download link */
+.paper-card {
+  max-width: 480px;
+  border: 1px solid rgba(27, 27, 26, 0.2);
+  padding: 2rem;
+  margin-top: 2.5rem;
+  background: var(--off-white);
+}
+
+.paper-card h3 {
+  font-family: var(--font-serif);
+  color: var(--ink-teal);
+  margin-bottom: 0.75rem;
+}
+
+.paper-card p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+
+.paper-card__form {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(27, 27, 26, 0.12);
+}
+
+.paper-card__form-label {
+  font-weight: 600;
+  margin-bottom: 1rem !important;
+}
+
+.paper-card input[type="text"],
+.paper-card input[type="email"] {
+  font-family: var(--font-sans) !important;
+  font-size: 0.95rem !important;
+  border: 1px solid rgba(27, 27, 26, 0.3) !important;
+  border-radius: 2px !important;
+  background: var(--off-white) !important;
+  color: var(--charcoal) !important;
+  padding: 0.65rem 0.85rem !important;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.paper-card button,
+.paper-card input[type="submit"] {
+  font-family: var(--font-sans) !important;
+  font-weight: 600 !important;
+  background-color: var(--ink-teal) !important;
+  color: var(--off-white) !important;
+  border: none !important;
+  border-radius: 2px !important;
+  padding: 0.7rem 1.5rem !important;
+  letter-spacing: 0.02em;
+  width: 100%;
+}
+
+.paper-card button:hover,
+.paper-card input[type="submit"]:hover {
+  background-color: var(--charcoal) !important;
+}
+
+.paper-card [class*="powered"],
+.paper-card [class*="branding"] {
+  opacity: 0.35;
+  font-size: 0.7rem !important;
+  transform: scale(0.85);
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -728,19 +798,3 @@ hr.rule {
   padding: 0.2em 0.6em;
   margin-bottom: var(--space-2);
 }
-
-
-/* Encharge signup bar - freefloating horizontal strip above the footer */
-.signup-bar {
-  background-color: var(--ink-teal);
-  border-top: 1px solid rgba(232, 213, 163, 0.25);
-  padding: 1.5rem 0;
-}
-
-.signup-bar .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
