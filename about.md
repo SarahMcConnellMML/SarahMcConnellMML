@@ -36,16 +36,16 @@ My background is agile coaching and delivery, at enterprise level at Jaguar Land
   <span class="eyebrow">Career experience</span>
   <div class="logo-strip__row">
     <div class="logo-strip__item">
-      <img src="{{ '/assets/images/logos/logo-gchq.png' | relative_url }}" alt="GCHQ">
+      <img src="{{ '/assets/images/logo-gchq.png' | relative_url }}" alt="GCHQ">
     </div>
     <div class="logo-strip__item">
-      <img src="{{ '/assets/images/logos/logo-jlr.png' | relative_url }}" alt="Jaguar Land Rover">
+      <img src="{{ '/assets/images/logo-jlr.png' | relative_url }}" alt="Jaguar Land Rover">
     </div>
     <div class="logo-strip__item">
-      <img src="{{ '/assets/images/logos/logo-dyson.jpg' | relative_url }}" alt="Dyson">
+      <img src="{{ '/assets/images/logo-dyson.jpg' | relative_url }}" alt="Dyson">
     </div>
     <div class="logo-strip__item">
-      <img src="{{ '/assets/images/logos/logo-entain.png' | relative_url }}" alt="Entain">
+      <img src="{{ '/assets/images/logo-entain.png' | relative_url }}" alt="Entain">
     </div>
   </div>
 </div>
