@@ -28,6 +28,24 @@ I started MML to do the part of this work most organisations skip. Not picking t
 
 I started my career at GCHQ, where security and governance came first rather than getting bolted on afterwards. That ordering has shaped how I look at every system since.
 
-My background is agile coaching and delivery: Jaguar Land Rover, Dyson, and a stretch as Senior Agile Coach at Entain, inside a large organisation working through its own AI adoption in real time. That kept the diagnosis grounded in what's actually happening on the ground, not theory.
+My background is agile coaching and delivery, at enterprise level at Jaguar Land Rover, at Dyson, and most recently at Entain, on their own AI adoption in real time. That kept the diagnosis grounded in what's actually happening on the ground, not theory.
 
+</div>
+
+<div class="logo-strip">
+  <span class="eyebrow">Career experience</span>
+  <div class="logo-strip__row">
+    <div class="logo-strip__item">
+      <img src="{{ '/assets/images/logos/logo-gchq.png' | relative_url }}" alt="GCHQ">
+    </div>
+    <div class="logo-strip__item">
+      <img src="{{ '/assets/images/logos/logo-jlr.png' | relative_url }}" alt="Jaguar Land Rover">
+    </div>
+    <div class="logo-strip__item">
+      <img src="{{ '/assets/images/logos/logo-dyson.jpg' | relative_url }}" alt="Dyson">
+    </div>
+    <div class="logo-strip__item">
+      <img src="{{ '/assets/images/logos/logo-entain.png' | relative_url }}" alt="Entain">
+    </div>
+  </div>
 </div>
