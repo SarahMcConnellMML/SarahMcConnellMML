@@ -826,3 +826,44 @@ hr.rule {
 @media (max-width: 600px) {
   .about-divider img { height: 18rem; }
 }
+
+/* ==========================================================================
+   About page — career experience logo strip
+   ========================================================================== */
+
+.logo-strip {
+  max-width: none !important;
+  width: 100%;
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(10, 61, 58, 0.15);
+}
+
+.logo-strip__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.logo-strip__item {
+  flex: 0 0 auto;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo-strip__item img {
+  height: 100%;
+  width: auto;
+  max-width: 9rem;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+  .logo-strip__row { gap: var(--space-3); }
+  .logo-strip__item { height: 2rem; }
+}
