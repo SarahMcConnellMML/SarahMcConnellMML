@@ -728,3 +728,19 @@ hr.rule {
   padding: 0.2em 0.6em;
   margin-bottom: var(--space-2);
 }
+
+
+/* Encharge signup bar - freefloating horizontal strip above the footer */
+.signup-bar {
+  background-color: var(--ink-teal);
+  border-top: 1px solid rgba(232, 213, 163, 0.25);
+  padding: 1.5rem 0;
+}
+
+.signup-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
